@@ -9,10 +9,11 @@ load_dotenv()
 # how we want to handle the events in the response stream.
 
 OPENAI_API_KEY= os.getenv('OPENAI_API_KEY')
+ASSISTANT_ID = os.getenv('ASSISTANT_ID')
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-assistant_id="asst_JaLwobkfgHziCOQ3gT5oLc6j" #Assistant Id
+assistant_id=ASSISTANT_ID #Assistant Id from chatgptplus
 
 thread = client.beta.threads.create()
 
